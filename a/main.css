@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+  }
+
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p{
+ width:100px;
+ height:50px;
+ border:1px solid;
+}
+
+
+#p1{
+    float:right;
+    text-align: center;
+    background: pink;
+}
+
+#p2{
+    float:right;
+    text-align: center;
+    color:white;
+    background: red;
+    border-color: black;
+
+}
+
+#p3{
+    float:right;
+    text-align: center;
+    background: yellow;
+}
+
+
+@media screen and (min-width: 992px) {
+    .column1 {
+      width: 98%;
+      margin: 0 1% 0 1%;
+    }
+    .column2 {
+        width: 98%;
+        margin: 0 1% 0 1%;
+
+      }
+    .column3 {
+        width: 98%;
+        margin: 0 1% 0 1%;
+    }  
+} 
+
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+    .column1 {
+        width: 98%;
+        margin: 0 1% 0 1%;
+    }
+    .column2 {
+        width: 98%;
+        margin: 0 1% 0 1%;
+    }
+    .column3 {
+        width: 98%;
+        margin: 0 1% 0 1%;
+    }  
+} 
+
+
+
+@media screen and (max-width: 767px) {
+    .column1 {
+      width: 100%;
+    }
+    .column2 {
+        width: 100%;
+        margin-top:20px;
+    }
+    .column3 {
+        width: 100%;
+        margin-top:20px;
+    }
+} 
+
+.column1.container-fluid{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:50px;
+}
+
+.column2.container-fluid{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:50px;
+}
+
+.column3.container-fluid{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:50px;
+}
