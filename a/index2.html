@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="speakHello.js"></script>
+    <script type="text/javascript" src="speakGoodBye.js"></script>
     <title>My website</title>
 </head>
 <body>
@@ -15,17 +17,17 @@ Hi please press F12 to see console log and the javascript code.
 
 
 <script>
-console.log("Hello!!!! If the first letter starts with J or j will say goodbye else we will say hello")
+console.log("If the first letter starts with 'J' or 'j' will say goodbye else we will say hello")
 
 function chooseName(){
-    var names =  ["Yaakov", "John", "Jen", "Jason","Paul","Frank","Larry","Paula","Laura","Jim"]
+    var names =  ["Yaakov", "John", "jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
     for(var i=0; i < names.length; i++){
         var first = names[i].charAt(0);
         if(first === 'J' || first === 'j'){
-            console.log("Goodbye " + " " + names[i]);
+            speakGoodBye.speak(names[i]);
         }
         else {
-            console.log("Hello " + " " + names[i]);
+            speakHello.speak(names[i]);
         }
     }
 }
