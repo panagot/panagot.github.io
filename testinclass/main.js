@@ -41,3 +41,7 @@ function eventHandler(){
 buttonAtBox3.addEventListener('click', eventHandler )
 
 box3.append(buttonAtBox3);
+
+function hello(){
+    console.log('hello')
+}
