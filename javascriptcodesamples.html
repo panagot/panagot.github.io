@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+    
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+    
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">Connect</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Javascript code samples
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="javascriptcodesamples.html">HTML</a>
+                      <a class="dropdown-item" href="shootinggame.html">Shooting Game</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+    <div class="row Jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead" id="demo">This text will be changed if you click me.</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Button to change text</button></a>
+        </div>
+    </div>
+    <div class="row Jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead" id="demo2">Click the button on the right to show the date.</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg" onclick='document.getElementById("demo2").innerHTML = Date()'>Show today date</button></a>
+        </div>
+    </div>
+    <div class="row Jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <img id="myImage" src="pic_bulboff.gif" style="width:100px" class="rounded mx-auto d-block">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg"onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg"onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>    
+        </div>
+    </div>
+    <div class="row Jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <script>
+                window.addEventListener("keydown", checkKeyPress,false);
+
+                function checkKeyPress(key){
+                    if(key.keyCode =="65"){
+                        alert("The 'a' letter has been pressed")
+                    }
+                }
+                </script>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Press  a </button></a>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <img src="img/w3newbie.png">
+            <hr class="light">
+            <p>555-555-555</p>
+            <p>email</p>
+            <p>street</p>
+            <p>city</p>
+        </div>
+        <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p>Monday:</p>
+                <p>Saturday:</p>
+                <p>Sunday</p>
+        </div>
+        <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p>City-state:</p>
+                <p>City-state:</p>
+                <p>City-state:</p>
+        </div>	
+        <div class="col-12">
+            <hr class="light-100">
+            <h5>&copy; wenewbie.com</h5>
+        </div>
+    </div>
+    </div>
+    </footer>
+    
+    
+    
+    </body>
+    </html>

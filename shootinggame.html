@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+
+#hero{
+    background: #ff0000;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+</style>
+</head>
+<body>
+<div id="hero"></div>
+
+Score
+
+<script>
+var hero = new Object();
+hero.element = 'hero'; 
+hero.x = 250;
+hero.y = 460;
+        
+        
+function setPosition(sprite) {
+    var e = document.getElementById(sprite.element);
+    e.style.left = sprite.x +'px';
+    e.style.top = sprite.y + 'px';
+}       
+
+document.onkeypress = function (evt) {
+
+};
+
+
+setPosition(hero);
+
+</script>
+</body>
+</html>
