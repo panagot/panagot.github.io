@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="style.css" rel="stylesheet">
+    <title>Handlebars</title>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+        
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Connect</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Javascript code samples
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="javascriptcodesamples.html">HTML</a>
+                          <a class="dropdown-item" href="petshandlebars.html">Handlebars Pets Template</a>
+                          <a class="dropdown-item" href="shootinggame.html">Simple shooting game</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Bitcoin
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="https://buycrypto.today/en">Exchange</a>
+                              <a class="dropdown-item" href="#">Bitfortip</a>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+</nav>    
+
+
+
+
+    <div class="page-wrap">
+        <h1>Pet templates with handlebars</h1>
+        <h6>Data taken from a JSON File. If no data is shown disable ad-block :)</h6>
+
+        <div id="pets-container"></div>
+    </div>
+
+
+<script id="petsTemplate" type = "text/x-handlebars-template">
+    {{#each pets}}
+    <div class="pet">
+        <div class="photo-column">
+            <img src="{{photo}}">
+        </div>
+
+        <div class="info-column">
+            <h2>{{name}} <span class="species">({{species}}) </span></h2>
+
+            <p>Age: {{calculateAge birthYear}} </p>
+
+
+            {{#if favFoods}}
+            <h4 class="headline-bar">Favorite Foods</h4>
+            <ul class="favorite-foods">
+                {{#each favFoods}}
+                <li>{{{this}}}</li>
+
+                {{/each}}
+
+
+            </ul>
+            {{/if}}
+        </div>
+
+    </div>
+
+    {{/each}}
+</script>
+
+
+<script src="handlebars-v4.1.2.js"></script> 
+<script src="main.js"></script> 
+
+    
+</body>
+</html>
